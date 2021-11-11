@@ -41,12 +41,12 @@ const data = [
 ];
 let filteredData = [];
 let table=document.getElementById("employeeTable");
-UpdateDataToTable(data);
 
+UpdateDataToTable(data);
 
 function UpdateDataToTable(inputData) {
     ClearRows();
-    AddHeaders();
+    AddHeaders(); 
     for(var i=0; i< inputData.length ;i++){
         let row=table.insertRow();
         for (var j=0; j< columns.length ;j++) {
@@ -56,13 +56,15 @@ function UpdateDataToTable(inputData) {
     } 
 
 }
-
+   
 function search(key){
     filteredData = [];
+    const keyL = key.toLowerCase();
     for(var i=0; i < data.length; i++){
         for (let j = 0; j < columns.length; j++) {
-            if (data[i][columns[j]].includes(key)) {
+            if (data[i][columns[j]].toLowerCase().includes(keyL)) {
                 filteredData.push(data[i]); //Entire row which contains the key is pushed
+                break; // break and continue
             }
         }
     }
