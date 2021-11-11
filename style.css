@@ -1,0 +1,30 @@
+table{
+    background-color: rgb(240, 244, 245); 
+    font-weight:bold;
+    border-collapse: collapse;
+ }
+ .grid-container {
+     display: grid;
+     padding: 10px;
+ }
+ body {
+     text-align: center;
+ }
+ div {
+     display: inline-block;
+ }
+ 
+ table tr:first-child{
+     text-transform: uppercase;
+     background-color: rgb(211, 209, 204);
+     border: 1px solid black;
+     padding: 5px; 
+     font-weight: bolder;
+     font-size:medium;
+     height: 50px;
+ } 
+ 
+ td {
+     border: 1px solid black;
+     padding: 5px;
+ }
