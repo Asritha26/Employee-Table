@@ -36,13 +36,32 @@ const data = [
     {id: '33', name:'Anu', department:'Customer Support', phone:'9091829831', salary:'22000', age:'25'},
     {id: '34', name:'Naveen', department:'Customer Support', phone:'9910928748', salary:'27000', age:'22'},
     {id: '35', name:'Soumya', department:'IT', phone:'8731564513', salary:'55000', age:'42'},
-    
-    
+      
 ];
 let filteredData = [];
 let table=document.getElementById("employeeTable");
-
 UpdateDataToTable(data);
+
+function nameSort() {
+    data.sort((a, b) => a.name.localeCompare(b.name));
+    UpdateDataToTable(data);
+}
+function deptSort() {
+    data.sort((a,b) => a.department.localeCompare(b.department));
+    UpdateDataToTable(data);
+}
+function ageSort() {
+    data.sort((a,b) => a.age-b.age);
+    UpdateDataToTable(data);
+}
+function salarySort() {
+    data.sort((a,b) => b.salary-a.salary);
+    UpdateDataToTable(data);
+}
+function idSort() {
+    data.sort((a,b) =>b.id-a.id);
+    UpdateDataToTable(data);
+}
 
 function UpdateDataToTable(inputData) {
     ClearRows();

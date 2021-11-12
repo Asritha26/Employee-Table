@@ -8,7 +8,11 @@
     <body>
         <input type="text" id="searchdata" name="search">
         <button type="button" class="btn btn-info" onclick="search(document.getElementById('searchdata').value)">Search</button>
-
+        <button type="button" class="btn btn-info" onclick="nameSort()">Namesort</button>
+        <button type="button" class="btn btn-info" onclick="deptSort()">Deptsort</button>
+        <button type="button" class="btn btn-info" onclick="ageSort()">Agesort</button>
+        <button type="button" class="btn btn-info" onclick="salarySort()">Salarysort</button>
+        <button type="button" class="btn btn-info" onclick="idSort()">IDsort</button>
         <div class="grid-container">
         <table id="employeeTable"></table>
         </div>
